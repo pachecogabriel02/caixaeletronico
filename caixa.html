@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./cx.js"></script>
+    <title>Document</title>
+
+<script> </script>
+let nd = 0
+let nome = prompt('Digite seu nome: ');
+let Saldo = 1000.00
+alert(`Olá ${nome}, é um prazer ter você por aqui`);
+
+function inicio(){  
+
+    opcoes = Number(prompt('O que deseja? 1.) Saldo | 2.) Extrato | 3.) Sacar | 4.) Depositar  5.) Transferir  | 6.)Fechar'));
+
+    switch(opcoes){
+        case 1:
+           VerSaldo();
+           break;
+        case 2:
+           VerExtrato();
+           break;
+        case 3:
+           RealizarSaque();
+           break;
+        case 4:
+           EfetuarDeposito();
+           break;
+        case 5:
+           FazerTransferencia();
+           break;
+        case 6:
+           Fechar();
+           break;
+        default:
+           erro();
+           break;
+
+    }
+
+}
+
+function VerSaldo(){
+    senha = Number(prompt('Insira a senha.'));
+    
+    if (senha != 2244){ 
+        alert('Senha incorreta.');  
+        VerSaldo() 
+
+    }
+    
+    else if (senha === 2244);
+           Number(alert('Seu saldo é ' + Saldo));
+           inicio();
+
+   }    
+
+function VerExtrato() { 
+    senha = Number(prompt('Digite sua senha'));
+    
+    if (senha != 2244){
+    alert('Senha incorreta.');   
+    VerExtrato();
+
+}
+
+else if (senha === 2244);
+alert('Seu extrato// Lojas Americanas 400$.')
+inicio();
+
+}
+
+function RealizarSaque(){
+    RealizarSaque = Number(prompt('Quanto deseja sacar?'))
+    senha = Number(prompt('Digite sua senha'));
+    
+    if (senha != 2244){
+    alert('Senha incorreta.');   
+
+}
+else if (Saldo < Saque){
+    alert('Impossível realizar a operação.')
+    RealizarSaque()
+}
+
+else if (Saldo <= nd){ 
+    alert('Impossível realizar a operação.')
+    RealizarSaque()
+}
+else if (senha === 2244);
+saldo -= saque;
+// o saldo será saldo - saque;
+alert("Seu saldo atual é: " + saldo);
+inicio();
+
+  }
+
+function FazerTransferencia() {
+    trans = Number(prompt('Informe o número da conta'));
+
+    valortrans = Number(prompt('Informe valor da transferência: '));
+
+    senha = Number(prompt("Digite sua senha: "));
+
+    if (isNaN(tran) || tran === '') {
+        alert('Informe um número válido para a conta    ');
+        FazerTransferencia();
+}
+
+else if (senha != 2244) {
+    alert('Senha inválida.');
+    FazerTransferencia();
+}
+
+else if (Saldo < valortrans) {
+    alert('Não é possível, saldo insuficiente.');
+    FazerTransferencia();
+
+}
+
+else if (valortrans <= nd) {
+alert('Não é possível.');
+
+}
+
+else (senha === 2244); {
+ saldo -= valortrans;
+
+ alert('seu saldo atual é ' + saldo);
+inicio();
+
+}
+
+function EfetuarDeposito(){
+
+    deposito = Number(prompt('Digite o valor a se depositar'));
+
+    if  (isNaN(deposito) || deposito === '') {
+        alert('Digite apenas números');
+        EfetuarDeposito();
+
+    } else if  (deposito <= nd) {
+        alert("Operação não autorizada");
+        EfetuarDeposito();
+    }
+    else (Saldo += deposito); {
+alert("Seu saldo atual é: " + Saldo);
+inicio();
+    }
+
+    function Fechar() {
+        confirma = confirm('Deseja sair?');
+
+        if(confirma) {
+            alert('${nome}, obrigado por usar nosso caixa!')
+            window.close();
+        } else {
+            inicio();
+        }
+        }
+    }
+    </script>
+    </head>
+<body>
+    
+</body>
+</html>
